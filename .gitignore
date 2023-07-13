@@ -1,2 +1,5 @@
 # compiled class file
 *.class
+
+# ignore note taking file
+anotacoes.md
