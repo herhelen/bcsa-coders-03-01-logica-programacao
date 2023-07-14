@@ -5,14 +5,18 @@ public class Aula02 {
     public static void main(String[] args) {
         int idade = 8;
 
+        System.out.println(retornaFaixaEtaria(idade));
+    }
+
+    public static String retornaFaixaEtaria(int idade) {
         if(idade < 13) {
-            System.out.println("Criança");
+            return "Criança";
         } else if(idade < 18) {
-            System.out.println("Adolescente");
+            return "Adolescente";
         } else if(idade < 60) {
-            System.out.println("Adulto");
+            return "Adulto";
         } else {
-            System.out.println("Idoso");
+            return "Idoso";
         }
     }
 
