@@ -1,11 +1,13 @@
 package aula02;
 
+import static aulaUtils.Utils.lerInt;
+
 public class Aula02 {
 
     public static void main(String[] args) {
-        int idade = 8;
-
+        int idade = lerInt("Digite a idade: ");
         System.out.println(retornaFaixaEtaria(idade));
+
     }
 
     public static String retornaFaixaEtaria(int idade) {
