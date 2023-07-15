@@ -1,6 +1,5 @@
 package aula02;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Exercicio02Sort {
@@ -54,45 +53,40 @@ public class Exercicio02Sort {
         return selectionSort(array, false);
     }
 
-    public static int[] getOnlyEvenNumbers(int[] array) {
-        int countEvenNumbers = 0;
+    public static int[] getNumbers(int[] array, boolean onlyEvens, boolean isAscending) {
+        int count = 0;
 
         for(int i = 0; i < array.length; i++) {
-            if(array[i] % 2 == 0) {
-                countEvenNumbers++;
+            if(onlyEvens && (array[i] % 2 == 0)) {
+                count++;
+            } else if(!onlyEvens && (array[i] % 2 != 0)) {
+                count++;
             }
         }
 
-        int[] numbers = new int[countEvenNumbers];
+        int[] numbers = new int[count];
         int j = 0;
 
         for(int i = 0; i < array.length; i++) {
-            if(array[i] % 2 == 0) {
+            if(onlyEvens && (array[i] % 2 == 0)) {
+                numbers[j++] = array[i];
+            } else if(!onlyEvens && (array[i] % 2 != 0)) {
                 numbers[j++] = array[i];
             }
         }
 
-        return sortAscendingOrder(numbers);
+        if(isAscending) {
+            return sortAscendingOrder(numbers);
+        }
+
+        return sortDescendingOrder(numbers);
+    }
+
+    public static int[] getOnlyEvenNumbers(int[] array) {
+        return getNumbers(array, true, true);
     }
 
     public static int[] getOnlyOddNumbers(int[] array) {
-        int countOddNumbers = 0;
-
-        for(int i = 0; i < array.length; i++) {
-            if(array[i] % 2 != 0) {
-                countOddNumbers++;
-            }
-        }
-
-        int[] numbers = new int[countOddNumbers];
-        int j = 0;
-
-        for(int i = 0; i < array.length; i++) {
-            if(array[i] % 2 != 0) {
-                numbers[j++] = array[i];
-            }
-        }
-
-        return sortAscendingOrder(numbers);
+        return getNumbers(array, false, true);
     }
 }
