@@ -14,41 +14,38 @@ public class Exercicio02Sort {
         System.out.println(Arrays.toString(descendingOrder));
     }
 
-    public static int[] sortAscendingOrder(int[] array) {
-        int idxSmallest, temp;
+    public static int[] selectionSort(int[] array, boolean isAsceding) {
+        int idx, temp;
         int[] numbers = array.clone();
 
         for(int i = 0; i < numbers.length; i++) {
-            idxSmallest = i;
+            idx = i;
+
             for(int j = i + 1; j < numbers.length; j++) {
-                if(numbers[j] < numbers[idxSmallest]) {
-                    idxSmallest = j;
+                if(isAsceding) {
+                    if(numbers[j] < numbers[idx]) {
+                        idx = j;
+                    }
+                } else {
+                    if(numbers[j] > numbers[idx]) {
+                        idx = j;
+                    }
                 }
             }
+
             temp = numbers[i];
-            numbers[i] = numbers[idxSmallest];
-            numbers[idxSmallest] = temp;
+            numbers[i] = numbers[idx];
+            numbers[idx] = temp;
         }
 
         return numbers;
     }
 
+    public static int[] sortAscendingOrder(int[] array) {
+        return selectionSort(array, true);
+    }
+
     public static int[] sortDescendingOrder(int[] array) {
-        int idxLargest, temp;
-        int[] numbers = array.clone();
-
-        for(int i = 0; i < numbers.length; i++) {
-            idxLargest = i;
-            for(int j = i + 1; j < numbers.length; j++) {
-                if(numbers[j] > numbers[idxLargest]) {
-                    idxLargest = j;
-                }
-            }
-            temp = numbers[i];
-            numbers[i] = numbers[idxLargest];
-            numbers[idxLargest] = temp;
-        }
-
-        return numbers;
+        return selectionSort(array, false);
     }
 }
