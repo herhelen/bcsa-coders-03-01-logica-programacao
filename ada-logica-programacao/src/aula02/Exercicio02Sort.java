@@ -19,7 +19,7 @@ public class Exercicio02Sort {
         System.out.println(Arrays.toString(oddNumbers));
     }
 
-    public static int[] selectionSort(int[] array, boolean isAsceding) {
+    public static int[] selectionSort(int[] array, boolean isAscending) {
         int idx, temp;
         int[] numbers = array.clone();
 
@@ -27,7 +27,7 @@ public class Exercicio02Sort {
             idx = i;
 
             for(int j = i + 1; j < numbers.length; j++) {
-                if(isAsceding) {
+                if(isAscending) {
                     if(numbers[j] < numbers[idx]) {
                         idx = j;
                     }
