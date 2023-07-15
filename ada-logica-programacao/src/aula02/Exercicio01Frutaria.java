@@ -2,7 +2,7 @@ package aula02;
 
 import java.util.Scanner;
 
-public class Exercicio1 {
+public class Exercicio01Frutaria {
 
     static final double PRECO_PROMOCIONAL = 1.25;
     static final double PRECO_NORMAL = 1.45;
@@ -26,7 +26,7 @@ public class Exercicio1 {
         for(int i = 0; i < frutas.length; i++){
             System.out.printf("%s: ", frutas[i]);
             quantidadeFrutas[i] = sc.nextInt();
-
+            valorFinal += calculaValor(quantidadeFrutas[i]);
         }
 
         System.out.printf("Valor total a ser pago é: %.2f", valorFinal);
