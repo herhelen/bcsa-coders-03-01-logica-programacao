@@ -12,4 +12,23 @@ public class Utils {
 
         return valor;
     }
+
+    public static double lerDouble() {
+        Scanner sc = new Scanner(System.in);
+
+        double valor = sc.nextDouble();
+        sc.nextLine();
+
+        return valor;
+    }
+
+    public static double lerDouble(String msg) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print(msg);
+        double valor = sc.nextDouble();
+        sc.nextLine();
+
+        return valor;
+    }
 }
