@@ -8,8 +8,7 @@ public class Utils {
 
         System.out.print(msg);
         int valor = sc.nextInt();
-
-        sc.close();
+        sc.nextLine();
 
         return valor;
     }
