@@ -1,19 +1,16 @@
 package aula03;
 
-import java.util.Arrays;
-
-import static aulaUtils.Utils.lerDouble;
 import static aulaUtils.Utils.lerString;
 
 public class EX0304 {
     public static int primeiroCaractereUnico(String input) {
         int idxPrimeiroCharUnico = -1;
         boolean achouIgual;
-        for(int i = 0; i < input.length() && idxPrimeiroCharUnico == -1; i++) {
+        for(int i = 0; (i < input.length()) && (idxPrimeiroCharUnico == -1); i++) {
 
             achouIgual = false;
-            for(int j = i + 1; j < input.length() && !achouIgual; j++) {
-                if(input.charAt(i) == input.charAt(j)) {
+            for(int j = 0; (j < input.length()) && (!achouIgual); j++) {
+                if((i != j) && (input.charAt(i) == input.charAt(j))) {
                     achouIgual = true;
                 }
             }
