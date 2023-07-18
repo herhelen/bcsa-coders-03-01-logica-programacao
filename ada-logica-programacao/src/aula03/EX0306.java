@@ -11,6 +11,10 @@ public class EX0306 {
     um de seus lados deve ser maior que o valor absoluto (módulo) da
     diferença dos outros dois lados e menor que a soma dos outros dois lados.
     a > |b - c| && a < b + c
+
+    Alguns outros links:
+    https://mundoeducacao.uol.com.br/matematica/condicao-existencia-um-triangulo.htm
+    https://brasilescola.uol.com.br/o-que-e/matematica/o-que-e-a-condicao-existencia-um-triangulo.htm
     */
 
     public static boolean verificaDesigualdadeTriangular(int x, int y, int z) {
