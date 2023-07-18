@@ -1,5 +1,7 @@
 package aula03;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Arrays;
 import static aulaUtils.Utils.*;
 
@@ -7,12 +9,10 @@ public class EX0302 {
 
     public static double arredondamento(double valor) {
 
-        int valorInteiro = (int) (valor * 1000.00);
-        double valorArredondado = Math.round(valor * 100.00) / 100.00;
-
-        if(valorInteiro % 5 == 0) {
-            valorArredondado = Math.floor(valor * 100.00) / 100.00;
-        }
+        double valorArredondado = new BigDecimal(valor * 100.0 / 100.0)
+                .setScale(3, RoundingMode.DOWN)
+                .setScale(2, RoundingMode.HALF_DOWN)
+                .doubleValue();
 
         return valorArredondado;
     }
