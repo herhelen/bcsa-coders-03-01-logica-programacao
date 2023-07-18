@@ -19,8 +19,8 @@ public class EX0306 {
 
     public static boolean ehTriangulo(int a, int b, int c) {
         return
-                verificaDesigualdadeTriangular(a, b, c) ||
-                verificaDesigualdadeTriangular(b, a, c) ||
+                verificaDesigualdadeTriangular(a, b, c) &&
+                verificaDesigualdadeTriangular(b, a, c) &&
                 verificaDesigualdadeTriangular(c, a, b);
     }
 
