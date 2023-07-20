@@ -48,7 +48,7 @@ public class A04EX07 {
     }
 
     public static boolean verificaDesigualdadeTriangular(int x, int y, int z) {
-        return (x > Math.abs(y - z)) && (x < (y + z));
+        return (y + z) > x;
     }
 
     public static void eUmTriangulo(int[] input) throws LadosInvalidosException {
