@@ -1,6 +1,6 @@
 package aula04;
 
-public class EX0403 {
+public class A04EX03 {
 
     public static void main(String[] args) {
         double[][] entradas = {

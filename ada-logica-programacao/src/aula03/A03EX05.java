@@ -1,6 +1,6 @@
 package aula03;
 
-public class EX0305 {
+public class A03EX05 {
     public static boolean elementosRepetidos(double[] input) {
         boolean achouIgual = false;
         for(int i = 0; i < input.length && !achouIgual; i++) {

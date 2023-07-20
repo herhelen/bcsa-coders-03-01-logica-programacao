@@ -1,13 +1,11 @@
 package aula04;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Arrays;
 import java.util.Locale;
 
-public class EX0401 {
+public class A04EX01 {
     public static void main(String[] args) {
         double[][] entradas = {
                 {100000.00, 12000.00, 20000.00},

@@ -1,21 +1,22 @@
-package aula03;
+package aula02;
 
-import static aulaUtils.Utils.*;
+import java.util.Scanner;
 
-public class EX0301 {
+public class A02EX01 {
 
     static final double PRECO_PROMOCIONAL = 1.25;
     static final double PRECO_NORMAL = 1.45;
 
-    public static double custoCompra(double input) {
-        if(input > 10) {
-            return PRECO_PROMOCIONAL * input;
+    public static double calculaValor(int quantidade) {
+        if(quantidade > 10) {
+            return PRECO_PROMOCIONAL * quantidade;
         }
 
-        return PRECO_NORMAL * input;
+        return PRECO_NORMAL * quantidade;
     }
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         String[] frutas = {"Pera", "Laranja", "Maçã", "Tomate", "Caqui"};
         int[] quantidadeFrutas = new int[frutas.length];
 
@@ -23,8 +24,9 @@ public class EX0301 {
 
         System.out.println("Frutaria da Maria. Coloque a quantidade desejada para seguinte frutas:");
         for(int i = 0; i < frutas.length; i++){
-            quantidadeFrutas[i] = lerInt(frutas[i] + ": ");
-            valorFinal += custoCompra(quantidadeFrutas[i]);
+            System.out.printf("%s: ", frutas[i]);
+            quantidadeFrutas[i] = sc.nextInt();
+            valorFinal += calculaValor(quantidadeFrutas[i]);
         }
 
         System.out.printf("Valor total a ser pago é: %.2f", valorFinal);

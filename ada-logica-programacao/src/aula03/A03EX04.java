@@ -2,7 +2,7 @@ package aula03;
 
 import static aulaUtils.Utils.lerString;
 
-public class EX0304 {
+public class A03EX04 {
     public static int primeiroCaractereUnico(String input) {
         int idxPrimeiroCharUnico = -1;
         boolean achouIgual;

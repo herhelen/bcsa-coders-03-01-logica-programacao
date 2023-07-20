@@ -2,7 +2,7 @@ package aula03;
 
 import static aulaUtils.Utils.lerString;
 
-public class EX0306 {
+public class A03EX06 {
     /*
     https://mundoeducacao.uol.com.br/matematica/formula-heron.htm
 

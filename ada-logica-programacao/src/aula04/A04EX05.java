@@ -1,6 +1,6 @@
 package aula04;
 
-public class EX0405 {
+public class A04EX05 {
     public static void main(String[] args) {
         String[] entradas = {
                 "amor",

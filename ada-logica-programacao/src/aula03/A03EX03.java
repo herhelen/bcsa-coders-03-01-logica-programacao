@@ -5,7 +5,7 @@ import java.math.RoundingMode;
 import java.util.Arrays;
 import static aulaUtils.Utils.lerDouble;
 
-public class EX0303 {
+public class A03EX03 {
     public static double arredondamento(double valor) {
         double valorArredondado = new BigDecimal(valor * 100.0 / 100.0)
                 .setScale(3, RoundingMode.DOWN)

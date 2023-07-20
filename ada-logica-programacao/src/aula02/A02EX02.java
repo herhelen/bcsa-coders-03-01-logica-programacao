@@ -2,7 +2,7 @@ package aula02;
 
 import java.util.Arrays;
 
-public class Exercicio02Sort {
+public class A02EX02 {
 
     public static void main(String[] args) {
         int[] numbers = {5, 4, 1, 2, 3};

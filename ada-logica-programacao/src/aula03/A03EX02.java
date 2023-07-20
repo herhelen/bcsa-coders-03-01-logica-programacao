@@ -5,7 +5,7 @@ import java.math.RoundingMode;
 import java.util.Arrays;
 import static aulaUtils.Utils.*;
 
-public class EX0302 {
+public class A03EX02 {
 
     public static double arredondamento(double valor) {
 

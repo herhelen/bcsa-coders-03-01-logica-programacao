@@ -5,7 +5,7 @@ import java.text.DecimalFormatSymbols;
 import java.util.Arrays;
 import java.util.Locale;
 
-public class EX0402 {
+public class A04EX02 {
     public static void main(String[] args) {
         double[][] entradas = {
                 {1, 5.0, 2000.00},

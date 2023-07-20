@@ -2,7 +2,7 @@ package aula01;
 
 import java.util.Scanner;
 
-public class Fahrenheit {
+public class A01EX01 {
 
     /*
     * Atividade 1
