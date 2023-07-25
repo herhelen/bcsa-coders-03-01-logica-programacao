@@ -17,7 +17,7 @@ public class A06EX02 {
 
     public static void main(String[] args) {
 
-        executa(250.10, "MG",267.607);
+        executa(250.10, "MG", 267.607);
         executa(250.10, "RJ", 287.615);
         executa(250.10, "SP", 280.112);
         executa(250.10, "DF", 280.112);
