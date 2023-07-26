@@ -25,14 +25,13 @@ public enum Semana {
         return dia;
     }
 
-    public static Semana nomeParaEnum(String nome) {
-        Semana retorno = null;
-
+    public static Semana nomeParaEnum(String nome) throws DiaDaSemanaInvalidoException {
         for(Semana dia : values()) {
             if(dia.getNome().equals(nome)) {
-                retorno = dia;
+                return dia;
             }
         }
-        return retorno;
+
+       throw new DiaDaSemanaInvalidoException(nome);
     }
 }
