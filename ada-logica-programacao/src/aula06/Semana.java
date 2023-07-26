@@ -27,7 +27,7 @@ public enum Semana {
 
     public static Semana nomeParaEnum(String nome) throws DiaDaSemanaInvalidoException {
         for(Semana dia : values()) {
-            if(dia.getNome().equals(nome)) {
+            if(dia.getNome().equalsIgnoreCase(nome)) {
                 return dia;
             }
         }
